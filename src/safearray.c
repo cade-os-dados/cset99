@@ -1,4 +1,4 @@
-#include "safearray.h"
+#include "cset99/safearray.h"
 
 int safecmp(safeArray a, safeArray b)
 {
