@@ -7,11 +7,12 @@ OPTIMIZED = -Wall -Wpedantic -Wno-unused-result -Ofast -g
 OBJ = build/obj
 BUILDER = ar rv
 
-FILES = auxiliar/valset.c structs/safearray.c structs/set.c
+FILES = structs/safearray.c structs/set.c
+VALIDATION = auxiliar/valset.c
 
 safe:
-	gcc -Iinclude -Iauxiliar $(FILES) tests/test_safearray.c -o build/test_safearray.exe
-	gcc -Iinclude -Iauxiliar $(FILES) tests/test_set.c -o build/test_set.exe
+	gcc -Iinclude -Iauxiliar $(FILES) $(VALIDATION) tests/test_safearray.c -o build/test_safearray.exe
+	gcc -Iinclude -Iauxiliar $(FILES) $(VALIDATION) tests/test_set.c -o build/test_set.exe
 
 
 compile:
