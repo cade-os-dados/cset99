@@ -1,3 +1,5 @@
+#pragma once
+
 typedef struct sfarr
 {
     int* array;
